@@ -1,0 +1,28 @@
+.about-container {
+  width: 80%;
+  margin: 8rem auto;
+}
+
+.text-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: start;
+  margin-bottom: 3rem;
+}
+
+.text-container h1 {
+  color: var(--goldText);
+  font-size: 40px;
+  line-height: 1.3;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.img-container img {
+  width: 95%;
+  height: 70%;
+  margin: 0 auto;
+}
