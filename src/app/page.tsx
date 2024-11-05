@@ -1,10 +1,11 @@
+import About from "@/sections/about/about";
 import Hero from "@/sections/hero/hero";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
       <Hero />
+      <About />
     </div>
   );
 }
