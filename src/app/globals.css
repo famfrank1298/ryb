@@ -98,3 +98,8 @@ P tags: Classic Sans Medium
     overflow-x: hidden;
   }
 }
+
+.home-container {
+  width: 100vw;
+  height: 100vh;
+}

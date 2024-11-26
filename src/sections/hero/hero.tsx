@@ -1,11 +1,9 @@
-import Logo from "@/components/logo/logo";
 import "./hero.css";
 
 export default function Hero() {
   return (
     <div className="hero-section">
       <div>
-        <Logo />
         <div className="hero-text">
           <div>
             <i>
