@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "./hero.css";
 
 export default function Hero() {
@@ -21,7 +22,13 @@ export default function Hero() {
         </div>
       </div>
       <div className="image-container">
-        <img alt="stock image of house" src="heroImg.jpg" />
+        <Image
+          alt="stock image of house"
+          src="/heroImg.jpg"
+          layout="fill"
+          objectFit="contain"
+          priority
+        />
       </div>
     </div>
   );
