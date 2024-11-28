@@ -1,6 +1,6 @@
 hr {
   height: 4px;
   background-color: var(--goldText);
-  margin-top: 8rem;
-  margin-bottom: 3rem;
+  width: 80%;
+  margin: 6rem auto 3rem auto;
 }
