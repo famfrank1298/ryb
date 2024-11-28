@@ -8,6 +8,7 @@ export default function Nav() {
       <Logo />
       <div className="nav-buttons">
         <Button>Services</Button>
+        <Button>Who We Are</Button>
         <Button>Contact Us</Button>
         <Button>Book Consultation</Button>
       </div>

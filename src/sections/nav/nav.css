@@ -6,6 +6,7 @@
   align-self: center;
   justify-content: space-between;
   box-shadow: 0px 0px 5px 1px var(--goldText);
+  z-index: 99;
 }
 
 .nav-buttons {
