@@ -3,6 +3,7 @@ import Footer from "@/sections/footer/footer";
 import Hero from "@/sections/hero/hero";
 import Nav from "@/sections/nav/nav";
 import ContactForm from "@/sections/contact/contact";
+import CTA from "@/sections/cta/cta";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <About />
+      <CTA />
       <ContactForm />
       <Footer />
     </div>
