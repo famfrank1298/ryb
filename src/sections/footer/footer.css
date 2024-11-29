@@ -1,7 +1,7 @@
 .footer-container {
   padding: 2rem;
   width: 100%;
-  background-color: rgb(36, 35, 35);
+  background-color: var(--gray);
   font-size: 20px;
   text-align: center;
   margin-top: 3rem;
