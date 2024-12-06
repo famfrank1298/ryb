@@ -7,10 +7,12 @@ export default function Nav() {
     <div className="nav-container">
       <Logo />
       <div className="nav-buttons">
+        <Button>Home</Button>
+        <Button>About Us</Button>
         <Button>Services</Button>
-        <Button>Who We Are</Button>
         <Button>Contact Us</Button>
         <Button>Book Consultation</Button>
+        {/* <CalendlyForm /> */}
       </div>
     </div>
   );

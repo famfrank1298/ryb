@@ -43,12 +43,13 @@
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: black;
 }
 
 .contact-form button {
   padding: 0.75rem;
   font-size: 1rem;
-  background-color: #0070f3;
+  background-color: var(--goldText);
   color: white;
   border: none;
   border-radius: 5px;
@@ -56,7 +57,7 @@
 }
 
 .contact-form button:disabled {
-  background-color: #aaa;
+  background-color: #b1d944;
   cursor: not-allowed;
 }
 

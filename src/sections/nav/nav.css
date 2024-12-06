@@ -1,6 +1,6 @@
 .nav-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1.75fr;
   width: 100%;
   height: var(--navbar-height);
   align-self: center;

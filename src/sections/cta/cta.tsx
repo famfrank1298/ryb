@@ -16,6 +16,18 @@ export default function CTA() {
         <h1>Overcome your obstacles. Get Business Coaching, Today!</h1>
         <Button className="cta-button">Book Consultation</Button>
       </div>
+      {/* <!-- Calendly inline widget begin --> */}
+      {/* <div
+        className="calendly-inline-widget"
+        data-url="https://calendly.com/rowboakye-rybpremier/30min?background_color=242323&text_color=ededed&primary_color=ffcb71"
+        style={{ minWidth: "320px", height: "700px" }}
+      ></div>
+      <script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        async
+      ></script>
+      <!-- Calendly inline widget end --> */}
     </div>
   );
 }

@@ -1,16 +1,8 @@
-// export default function Contact() {
-//   return (
-//     <div>
-//       <h2>Get in Touch</h2>
-//       <p>Based in Chicago, IL</p>
-//       <p>[Insert Phone Number]</p>
-//     </div>
-//   );
-// }
 "use client";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import "./contact.css";
+import { Button } from "@/components/ui/button";
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -37,9 +29,6 @@ const ContactForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    console.log(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
-    console.log(process.env.NEXT_PUBLIC_TEMPLATE_ID);
-    console.log(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
 
     try {
       await emailjs.send(
@@ -49,7 +38,7 @@ const ContactForm = () => {
           from_name: form.name,
           to_name: "Mr.RYB",
           from_email: form.email,
-          to_email: "mensahfrank330@gmail.com",
+          to_email: process.env.NEXT_PUBLIC_EMAIL_RECEIVER,
           message: form.message,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
@@ -103,7 +92,7 @@ const ContactForm = () => {
               required
             />
           </label>
-          <button type="submit" disabled={loading}>
+          <button type="submit" disabled={loading} className="contact-button">
             {loading ? "Sending..." : "Send"}
           </button>
           {successMessage && (
