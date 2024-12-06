@@ -2,8 +2,6 @@ import Line from "@/components/line/line";
 import Card from "@/components/card/card";
 import React from "react";
 import "./about.css";
-import { Button } from "@/components/ui/button";
-import CalendlyForm from "@/components/CalendlyForm";
 
 export default function About() {
   // const cards = [
@@ -47,7 +45,6 @@ export default function About() {
         <Card card={cards[3]} />
       </div> */}
       {/* <Button className="about-button">Book Consultation</Button> */}
-      <CalendlyForm type={1} />
     </div>
   );
 }

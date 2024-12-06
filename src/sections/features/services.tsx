@@ -1,6 +1,7 @@
 import Line from "@/components/line/line";
 import "./services.css";
 import { Button } from "@/components/ui/button";
+import CalendlyForm from "@/components/CalendlyForm";
 
 export default function Services() {
   return (
@@ -18,6 +19,7 @@ export default function Services() {
       <div className="book-container">
         <Button className="book-button">Book Consultation</Button>
       </div>
+      <CalendlyForm type={1} />
     </div>
   );
 }

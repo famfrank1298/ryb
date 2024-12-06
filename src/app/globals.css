@@ -101,4 +101,10 @@ P tags: Classic Sans Medium
   margin-bottom: 3rem;
 }
 
-/* eyJraWQiOiIxY2UxZTEzNjE3ZGNmNzY2YjNjZWJjY2Y4ZGM1YmFmYThhNjVlNjg0MDIzZjdjMzJiZTgzNDliMjM4MDEzNWI0IiwidHlwIjoiUEFUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNzMzNDE4NzM2LCJqdGkiOiJlYWE0ODY1ZC1lNmY1LTQzODItOTI2My00ZjY2NTIxZmEwZWEiLCJ1c2VyX3V1aWQiOiI5Y2VhNDE4MC1hMTk3LTQ0MzgtODFjMC1jYTRhY2RmYzUzN2UifQ.xs9AQFupik6bNN7DHhSaN1wzYYf-nAoa46TzxxBFPq4HSOpoOxSI3QEfv1M0sCTkbJiTLngry1VCmboH_ocp0g */
+.success-toast {
+  background-color: green;
+}
+
+.failed-toast {
+  background-color: red;
+}
