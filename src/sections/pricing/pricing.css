@@ -1,0 +1,7 @@
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80vw;
+  margin: 8rem auto;
+  gap: 2rem;
+}
