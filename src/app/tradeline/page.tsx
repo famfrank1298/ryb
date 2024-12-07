@@ -1,10 +1,10 @@
 import React from "react";
-import { Line, columns } from "./columns";
-import { DataTable } from "./data-table";
 import Nav from "@/sections/nav/nav";
 import Footer from "@/sections/footer/footer";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/sections/contact/contact";
+import { DataTable } from "./data-table";
+import { columns, Line } from "./columns";
 
 async function getData(): Promise<Line[]> {
   // Fetch data from your API here.

@@ -10,3 +10,21 @@
   justify-content: center;
   cursor: pointer;
 }
+
+@media (max-width: 665px) {
+  .logo {
+    transform: scale(0.8);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .logo {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo {
+    margin-left: 0.5rem;
+  }
+}

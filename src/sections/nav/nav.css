@@ -1,37 +1,188 @@
 .nav-container {
   display: grid;
-  grid-template-columns: 1fr 1.75fr;
-  width: 100%;
-  height: var(--navbar-height);
-  align-self: center;
-  justify-content: space-between;
-  box-shadow: 0px 0px 5px 1px var(--gold);
-  z-index: 99;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 1rem;
+  width: 100vw;
+  height: var(--navbar-height, 80px);
+  background-color: var(--background);
+  box-shadow: 0px 2px 5px var(--secondary-gray);
   animation: fadeIn 2s ease-in;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 15%;
-  }
-  50% {
-    opacity: 75%;
-  }
-  100% {
-    opacity: 100%;
-  }
+  position: fixed;
+  top: 0;
+  z-index: 40;
+  align-items: center;
 }
 
 .nav-buttons {
   display: flex;
-  justify-content: space-around;
+  gap: 1.5rem;
   align-items: center;
-  width: 80%;
-  margin: 0 auto;
+  justify-content: center;
   color: var(--foreground);
 }
 
+.nav-buttons Button {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--foreground);
+  background-color: transparent;
+  border: 1px solid var(--gold);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
 .nav-buttons Button:hover {
-  box-shadow: 0px 0px 2px 2px var(--gold);
-  scale: 1.1;
+  background-color: var(--gold);
+  color: var(--gray);
+  box-shadow: 0px 4px 10px var(--gold);
+  transform: scale(1.05);
+}
+
+.consultation-button {
+  justify-self: end;
+  font-family: "Inter", sans-serif;
+  background-color: var(--gold);
+  color: var(--background);
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.consultation-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 10px var(--gold);
+  color: var(--gold);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+/* For Mobile Devices (320px — 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  .nav-container {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  #contactBtn {
+    display: none;
+  }
+
+  .nav-buttons Button {
+    justify-content: right;
+    background-color: var(--gold);
+    color: var(--background);
+    border: 1px solid var(--gold);
+    font-weight: 600;
+  }
+
+  .nav-buttons Button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px var(--gold);
+    color: var(--gold);
+  }
+}
+
+/* iPads and Tablets (540px — 768px) */
+@media (max-width: 664px) {
+  .nav-container {
+    grid-template-columns: 0.5fr 2fr 1fr;
+    padding: 0 1rem;
+  }
+
+  #homeBtn,
+  #aboutBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    grid-template-columns: 0.5fr 1.5fr 0.8fr;
+    padding: 0 0.3rem;
+  }
+
+  .nav-buttons {
+    gap: 0.5rem;
+  }
+
+  .nav-buttons Button,
+  .consultation-button {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .consultation-button {
+    justify-self: center;
+  }
+}
+
+/* Laptops and Small Screen (769px — 1024px) */
+@media (max-width: 1024px) {
+  .nav-container {
+    grid-template-columns: 0.5fr 1.5fr 1fr;
+    padding: 0 1rem;
+  }
+
+  .nav-buttons {
+    gap: 1rem;
+  }
+
+  .nav-buttons Button,
+  .consultation-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Large Screens and Desktops (1025px — 1200px) */
+@media (max-width: 1200px) {
+  .nav-container {
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 0 1.5rem;
+  }
+
+  .nav-buttons {
+    gap: 1.75rem;
+  }
+
+  .nav-buttons Button,
+  .consultation-button {
+    padding: 0.55rem 1.1rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* TV and Extra Large Screens (1201px and more) */
+@media (min-width: 1201px) {
+  .nav-container {
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 0 2rem;
+  }
+
+  .nav-buttons {
+    gap: 2rem;
+  }
+
+  .nav-buttons Button,
+  .consultation-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.1rem;
+  }
 }

@@ -22,13 +22,14 @@ export default function Nav() {
       <Logo />
       <div className="nav-buttons">
         <Button
+          id="homeBtn"
           onClick={() => {
             router.push("/");
           }}
         >
           Home
         </Button>
-        <a href="/#about">
+        <a href="/#about" id="aboutBtn">
           <Button>About Us</Button>
         </a>
 
@@ -45,8 +46,6 @@ export default function Nav() {
                   Tradelines
                 </span>
               </DropdownMenuItem>
-            </DropdownMenuGroup>
-            <DropdownMenuGroup>
               <DropdownMenuItem>
                 <span>Credit Repair</span>
               </DropdownMenuItem>
@@ -54,18 +53,19 @@ export default function Nav() {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <a href="/#contact">
+        <a href="/#contact" id="contactBtn">
           <Button>Contact Us</Button>
         </a>
-
-        <Button
-          onClick={() => {
-            router.push("/consultation");
-          }}
-        >
-          Book Consultation
-        </Button>
       </div>
+
+      <Button
+        className="consultation-button"
+        onClick={() => {
+          router.push("/consultation");
+        }}
+      >
+        Book Consultation
+      </Button>
     </div>
   );
 }
