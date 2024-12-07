@@ -12,14 +12,25 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useRouter } from "next/navigation";
 
 export default function Nav() {
+  const router = useRouter();
+
   return (
     <div className="nav-container">
       <Logo />
       <div className="nav-buttons">
-        <Button>Home</Button>
-        <Button>About Us</Button>
+        <Button
+          onClick={() => {
+            router.push("/");
+          }}
+        >
+          Home
+        </Button>
+        <a href="/#about">
+          <Button>About Us</Button>
+        </a>
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -41,8 +52,17 @@ export default function Nav() {
           </DropdownMenuContent>
         </DropdownMenu>
 
-        <Button>Contact Us</Button>
-        <Button>Book Consultation</Button>
+        <a href="/#contact">
+          <Button>Contact Us</Button>
+        </a>
+
+        <Button
+          onClick={() => {
+            router.push("/consultation");
+          }}
+        >
+          Book Consultation
+        </Button>
       </div>
     </div>
   );

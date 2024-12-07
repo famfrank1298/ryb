@@ -2,6 +2,17 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 80vw;
-  margin: 8rem auto;
+  margin: 6rem auto;
   gap: 2rem;
+}
+
+.pricing-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--goldText);
+  text-align: center;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Chocolate Classical Sans", sans-serif;
 }

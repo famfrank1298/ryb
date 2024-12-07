@@ -1,9 +1,11 @@
 "use client";
+
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import "./contact.css";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import ScrollAnimation from "@/components/ScrollAnimation/scrollAnimation";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -69,7 +71,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="contact-container">
+    <div className="contact-container animate" id="contact">
+      <ScrollAnimation />
       <div></div>
       <div className="contact-border">
         <h5 className="subheader">-Get in Touch-</h5>

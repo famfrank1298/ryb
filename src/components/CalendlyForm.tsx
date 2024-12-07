@@ -1,27 +1,36 @@
 "use client";
 
 import Script from "next/script";
+import { useEffect, useState } from "react";
 
-const CalendlyForm = ({ type }: { type?: number }) => {
-  // const username = process.env.NEXT_PUBLIC_CALENDLY_USERNAME;
-  // const showDetails: number =
-  //   process.env.NEXT_PUBLIC_CALENDLY_SHOW_DETAILS == "false" ? 1 : 0;
-  // const showCookies: number =
-  //   process.env.NEXT_PUBLIC_CALENDLY_SHOW_COOKIES == "false" ? 1 : 0;
+const CalendlyForm = ({ type }: { type: number }) => {
+  const username = process.env.NEXT_PUBLIC_CALENDLY_USERNAME;
+  const [event, setEventType] = useState<string | undefined>(
+    process.env.NEXT_PUBLIC_CALENDLY_FIFTEEN
+  );
+
+  useEffect(() => {
+    switch (type) {
+      case 1:
+        setEventType(process.env.NEXT_PUBLIC_CALENDLY_FIFTEEN);
+        break;
+      case 2:
+        setEventType(process.env.NEXT_PUBLIC_CALENDLY_THIRTY);
+        break;
+      case 3:
+        setEventType(process.env.NEXT_PUBLIC_CALENDLY_HOUR);
+        break;
+      default:
+        setEventType(process.env.NEXT_PUBLIC_CALENDLY_FIFTEEN);
+        break;
+    }
+  }, [type]);
 
   return (
     <>
       <div
         className="calendly-inline-widget"
-        // data-url={`https://calendly.com/${username}${
-        //   type ? `/${type}` : ""
-        // }?hide_landing_page_details=${showDetails}&hide_gdpr_banner=${showCookies}?background_color=242323&text_color=ffffff&primary_color=ffcb71`}
-        // data-url={`https://calendly.com/rowboakye-rybpremier/ryb-premier-consultation/30min?background_color=242323&text_color=ffffff&primary_color=ffcb71`}
-        data-url="https://calendly.com/rowboakye-rybpremier/30min?background_color=242323&text_color=ffffff&primary_color=ffcb71"
-        // data-url="https://calendly.com/rowboakye-rybpremier/ryb-premier-consultation-1?background_color=242323&text_color=ffffff&primary_color=ffcb71"
-        // data_url={`https://calendly.com${
-        //   consType || "defaultType"
-        // }?background_color=242323&text_color=ffffff&primary_color=ffcb71`}
+        data-url={`https://calendly.com/${username}/${event}?background_color=242323&text_color=ffffff&primary_color=ffcb71`}
         style={{
           minWidth: "320px",
           height: "700px",

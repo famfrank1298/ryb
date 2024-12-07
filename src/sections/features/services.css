@@ -35,41 +35,18 @@
 }
 
 .book-button {
-  display: inline-block;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #000;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 203, 113, 1),
-    rgba(204, 162, 90, 1)
-  );
+  background-color: var(--goldText);
+  color: #242323;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
   border: none;
-  border-radius: 50px;
+  border-radius: 30px;
   cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .book-button:hover {
-  background: linear-gradient(
-    90deg,
-    rgba(204, 162, 90, 1),
-    rgba(255, 203, 113, 1)
-  );
-  transform: translateY(-3px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-}
-
-.book-button:active {
-  transform: translateY(0);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
-}
-
-.book-button:focus {
-  outline: 2px solid rgba(255, 203, 113, 1);
-  outline-offset: 2px;
+  background-color: #f5bb59;
+  transform: translateY(-5px);
 }

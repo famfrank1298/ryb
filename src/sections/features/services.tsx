@@ -1,11 +1,16 @@
+"use client";
+
 import Line from "@/components/line/line";
 import "./services.css";
 import { Button } from "@/components/ui/button";
-import CalendlyForm from "@/components/CalendlyForm";
+import { useRouter } from "next/navigation";
+import ScrollAnimation from "@/components/ScrollAnimation/scrollAnimation";
 
 export default function Services() {
+  const router = useRouter();
   return (
-    <div className="service-container">
+    <div className="service-container animate">
+      <ScrollAnimation />
       <Line />
       <h1 className="section-title">What Can We Do For You</h1>
       <p className="service-text">
@@ -17,9 +22,15 @@ export default function Services() {
         entrepreneurial goals.
       </p>
       <div className="book-container">
-        <Button className="book-button">Book Consultation</Button>
+        <Button
+          className="book-button"
+          onClick={() => {
+            router.push("/consultation");
+          }}
+        >
+          Book Consultation
+        </Button>
       </div>
-      <CalendlyForm type={1} />
     </div>
   );
 }
