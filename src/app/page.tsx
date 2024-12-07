@@ -11,9 +11,9 @@ export default function Home() {
     <div className="home-container">
       <Nav />
       <Hero />
-      {/* <About />
+      <About />
       <Services />
-      <CTA />
+      {/* <CTA />
       <ContactForm /> */}
       <Footer />
     </div>

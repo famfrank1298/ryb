@@ -40,8 +40,9 @@ export default function About() {
         to financial freedom. We specialize in empowering individuals to build
         credit, unlock opportunities, and embrace entrepreneurship. At RYB
         Premier, we believe in turning aspirations into achievements, one step
-        at a time
+        at a time.
       </p>
+
       {/* <div className="service-list">
         <Card card={cards[0]} />
         <Card card={cards[1]} />
