@@ -1,10 +1,14 @@
 "use client";
+
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import "./contact.css";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
+import ScrollAnimation from "@/components/ScrollAnimation/scrollAnimation";
 
 const ContactForm = () => {
+  const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({
     name: "",
@@ -44,20 +48,31 @@ const ContactForm = () => {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
       );
 
+      toast({
+        title: "Email Sent!",
+        description: "Thank you, we will get back to you shortly",
+        className: "success-toast",
+      });
+
       setLoading(false);
-      setSuccessMessage(
-        "Thank you! I will get back to you as soon as possible."
-      );
+      setSuccessMessage("Thank you, we will get back to you shortly");
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
       setLoading(false);
       console.error(error);
       alert("Ahh, something went wrong. Please try again.");
+
+      toast({
+        title: "Email Sent!",
+        description: "Thank you, we will get back to you shortly",
+        className: "success-toast",
+      });
     }
   };
 
   return (
-    <div className="contact-container">
+    <div className="contact-container animate" id="contact">
+      <ScrollAnimation />
       <div></div>
       <div className="contact-border">
         <h5 className="subheader">-Get in Touch-</h5>
@@ -92,12 +107,10 @@ const ContactForm = () => {
               required
             />
           </label>
-          <button type="submit" disabled={loading} className="contact-button">
+
+          <Button type="submit" disabled={loading} className="contact-button">
             {loading ? "Sending..." : "Send"}
-          </button>
-          {successMessage && (
-            <p className="success-message">{successMessage}</p>
-          )}
+          </Button>
         </form>
       </div>
     </div>

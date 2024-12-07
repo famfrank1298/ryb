@@ -5,7 +5,7 @@
   height: var(--navbar-height);
   align-self: center;
   justify-content: space-between;
-  box-shadow: 0px 0px 5px 1px var(--goldText);
+  box-shadow: 0px 0px 5px 1px var(--gold);
   z-index: 99;
   animation: fadeIn 2s ease-in;
 }
@@ -32,6 +32,6 @@
 }
 
 .nav-buttons Button:hover {
-  box-shadow: 0px 0px 2px 2px var(--goldText);
+  box-shadow: 0px 0px 2px 2px var(--gold);
   scale: 1.1;
 }

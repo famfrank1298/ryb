@@ -16,7 +16,7 @@
   margin: 2rem auto;
   text-align: center;
   letter-spacing: 1px;
-  border-right: 1px solid var(--goldText);
+  border-right: 1px solid var(--gold
   padding-right: 1.5rem;
   font-family: "Georgia", serif;
 }
@@ -24,7 +24,7 @@
 .about-text span {
   display: inline-block;
   font-weight: bold;
-  color: var(--goldText);
+  color: var(--gold);
 }
 
 .about-text:hover {
@@ -46,12 +46,12 @@
   margin-bottom: 2rem;
   font-size: 20px;
   padding: 1.5rem;
-  background-color: var(--goldText);
+  background-color: var(--gold);
   color: var(--background);
   margin-left: 5rem;
 }
 
 .about-button:hover {
-  background-color: var(--goldText);
+  background-color: var(--gold);
   scale: 1.05;
 }

@@ -5,32 +5,32 @@
 }
 
 .card-container {
-  box-shadow: 1px 1px 1px 1px var(--goldText);
+  box-shadow: 1px 1px 1px 1px var(--gold);
   padding: 2rem;
   margin-bottom: 2rem;
 }
 
 .card-container:hover {
   animation: cardAnimate 1s ease-out infinite;
-  box-shadow: 0px 0px 4px 4px var(--goldText);
+  box-shadow: 0px 0px 4px 4px var(--gold);
 }
 
 @keyframes cardAnimate {
   0% {
     border-radius: 0px;
     transform: translateY(5px);
-    box-shadow: 0px 0px 1px 2px var(--goldText);
+    box-shadow: 0px 0px 1px 2px var(--gold);
   }
 
   50% {
     border-radius: 5px;
     transform: translateY(0px);
-    box-shadow: 0px 0px 2px 3px var(--goldText);
+    box-shadow: 0px 0px 2px 3px var(--gold);
   }
 
   100% {
     border-radius: 10px;
     transform: translateY(5px);
-    box-shadow: 0px 0px 3px 4px var(--goldText);
+    box-shadow: 0px 0px 3px 4px var(--gold);
   }
 }

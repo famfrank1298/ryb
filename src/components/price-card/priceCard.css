@@ -1,0 +1,60 @@
+.pc-container {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--gold
+  background-color: var(--gray);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pc-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(255, 203, 113, 0.3);
+}
+
+.pc-title {
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.pc-duration {
+  font-size: 1rem;
+  color: var(--foreground);
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.pc-price {
+  font-size: 2.2rem;
+  color: var(--foreground);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.pc-description {
+  font-size: 1rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.pc-button {
+  padding: 0.8rem 2rem;
+  background-color: var(--gold);
+  color: #1b1b1b;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.pc-button:hover {
+  background-color: #d4a13b;
+}
