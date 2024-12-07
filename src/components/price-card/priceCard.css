@@ -2,7 +2,7 @@
   width: 100%;
   padding: 2rem;
   border-radius: 20px;
-  border: 1px solid var(--goldText);
+  border: 1px solid var(--gold
   background-color: var(--gray);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -14,7 +14,7 @@
 
 .pc-title {
   font-size: 1.5rem;
-  color: var(--goldText);
+  color: var(--gold);
   margin-bottom: 0.5rem;
   font-weight: 600;
   text-align: center;
@@ -45,7 +45,7 @@
 
 .pc-button {
   padding: 0.8rem 2rem;
-  background-color: var(--goldText);
+  background-color: var(--gold);
   color: #1b1b1b;
   border: none;
   border-radius: 30px;

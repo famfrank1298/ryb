@@ -11,7 +11,7 @@
   margin: 2rem auto;
   text-align: center;
   letter-spacing: 1px;
-  border-left: 1px solid var(--goldText);
+  border-left: 1px solid var(--gold);
   padding-left: 1.5rem;
   font-family: "Georgia", serif;
 }
@@ -19,7 +19,7 @@
 .service-text span {
   display: inline-block;
   font-weight: bold;
-  color: var(--goldText);
+  color: var(--gold);
 }
 
 .service-text:hover {
@@ -35,7 +35,7 @@
 }
 
 .book-button {
-  background-color: var(--goldText);
+  background-color: var(--gold);
   color: #242323;
   font-size: 1.2rem;
   font-weight: 600;
