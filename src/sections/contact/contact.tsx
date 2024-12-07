@@ -75,38 +75,40 @@ const ContactForm = () => {
       <ScrollAnimation />
       <div></div>
       <div className="contact-border">
-        <h5 className="subheader">-Get in Touch-</h5>
+        <h5 className="subheader">- Get in Touch -</h5>
         <h2 className="contact-title">Contact Us</h2>
         <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
-          <label>
-            Name:
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <label>
-            Email:
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              required
-            />
-          </label>
-          <label>
-            Message:
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              required
-            />
-          </label>
+          <label htmlFor="name">Name:</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            required
+            placeholder="Enter your name"
+          />
+
+          <label htmlFor="email">Email:</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            required
+            placeholder="Enter your email"
+          />
+
+          <label htmlFor="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            required
+            placeholder="Type your message here"
+          />
 
           <Button type="submit" disabled={loading} className="contact-button">
             {loading ? "Sending..." : "Send"}

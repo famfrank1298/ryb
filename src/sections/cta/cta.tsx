@@ -12,8 +12,8 @@ export default function CTA() {
       <Image
         alt="flowing water"
         src="/waterBanner.jpg"
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: "cover" }}
         priority
       />
       <div className="cta-text">
