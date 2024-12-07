@@ -9,7 +9,7 @@ import ScrollAnimation from "@/components/ScrollAnimation/scrollAnimation";
 export default function Services() {
   const router = useRouter();
   return (
-    <div className="service-container animate">
+    <div className="service-container animate" id="services">
       <ScrollAnimation />
       <Line />
       <h1 className="section-title">What Can We Do For You</h1>

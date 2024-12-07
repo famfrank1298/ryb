@@ -9,10 +9,10 @@ import Pricing from "@/sections/pricing/pricing";
 import React, { useState } from "react";
 
 export default function Consultations() {
-  const [activeForm, setActiveForm] = useState<number>(1); // Keep track of the active form (1, 2, or 3)
+  const [activeForm, setActiveForm] = useState<number>(1);
 
   const handleButtonClick = (formNumber: number) => {
-    setActiveForm(formNumber); // Update the active form based on button click
+    setActiveForm(formNumber);
   };
 
   return (
