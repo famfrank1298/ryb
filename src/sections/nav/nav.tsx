@@ -41,7 +41,9 @@ export default function Nav() {
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem>
-                <span>Tradelines</span>
+                <span onClick={() => router.push("/tradeline")}>
+                  Tradelines
+                </span>
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuGroup>
