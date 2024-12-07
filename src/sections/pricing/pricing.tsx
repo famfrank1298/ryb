@@ -47,14 +47,14 @@ export default function Pricing() {
           title={plans[1].title}
           price={plans[1].price}
           duration={plans[1].duration}
-          num={plans[0].num}
+          num={plans[1].num}
           description={plans[1].description}
         />
         <PriceCard
           title={plans[2].title}
           price={plans[2].price}
           duration={plans[2].duration}
-          num={plans[0].num}
+          num={plans[2].num}
           description={plans[2].description}
         />
       </div>

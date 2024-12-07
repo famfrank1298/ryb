@@ -4,15 +4,28 @@
   width: 80vw;
   margin: 6rem auto;
   gap: 2rem;
+  grid-auto-rows: minmax(300px, auto);
 }
 
 .pricing-title {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--gold);
   text-align: center;
-  margin-top: 3rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: "Chocolate Classical Sans", sans-serif;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .pricing-container {
+    grid-template-columns: 1fr;
+    width: 90vw;
+    gap: 1.5rem;
+  }
+  .pricing-title {
+    font-size: 2rem;
+  }
 }
