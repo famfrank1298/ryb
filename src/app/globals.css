@@ -104,6 +104,21 @@ body {
   height: 100%;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-toast {
+  background-color: green;
+}
+
+.failed-toast {
+  background-color: red;
+}
+
+/* Main Page */
 .home-container {
   margin: 0;
   padding: 0;
@@ -118,14 +133,6 @@ body {
   font-size: 40px;
   line-height: 1.3;
   margin-bottom: 3rem;
-}
-
-.success-toast {
-  background-color: green;
-}
-
-.failed-toast {
-  background-color: red;
 }
 
 .schedule-title {
@@ -145,6 +152,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* Consultation Page */
 .c-calenders {
   position: relative;
   width: 100%;
@@ -210,16 +218,23 @@ body {
   transform: translateY(0);
 }
 
+/* Tradeline Page */
 .tradeline-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: rgba(255, 203, 113, 255);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
   text-align: center;
-  margin-bottom: 1.5rem;
-  margin-top: 4rem;
+  /* margin-bottom: 2rem; */
+  margin-top: var(--navbar-height, 70px);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: "Chocolate Classical Sans", sans-serif;
+  padding-top: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .tradeline-button {
@@ -227,23 +242,49 @@ body {
   color: #242323;
   font-size: 1.2rem;
   font-weight: 600;
-  padding: 0.8rem 2rem;
-  margin-bottom: 7rem;
+  padding: 1rem 2.5rem;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 8rem;
 }
 
 .tradeline-button:hover {
-  background-color: #f5bb59;
   transform: translateY(-5px);
+  box-shadow: 0 2px 2px var(--gold);
+  color: var(--gold);
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Data Table Styles */
+.shadcn-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.shadcn-table th,
+.shadcn-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.shadcn-table th {
+  background-color: var(--gray);
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.shadcn-table td {
+  color: var(--foreground);
+}
+
+.shadcn-table tbody tr:hover {
+  background-color: var(--gold);
+  color: #fff;
 }
 
 .calendly-container {
@@ -266,6 +307,7 @@ body {
   height: 100%;
 }
 
+/* Media Query */
 @media (max-width: 768px) {
   .calendly-container {
     padding-bottom: 75%;
@@ -279,5 +321,18 @@ body {
 
   .price-selector {
     gap: 15px;
+  }
+
+  .shadcn-table th,
+  .shadcn-table td {
+    padding: 0.8rem;
+  }
+
+  .tradeline-title {
+    font-size: 1.4rem;
+  }
+
+  .tradeline-button {
+    padding: 0.8rem 1.5rem;
   }
 }

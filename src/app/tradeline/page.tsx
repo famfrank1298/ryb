@@ -74,8 +74,10 @@ export default async function Tradeline() {
     <>
       <Nav />
       <h2 className="tradeline-title">Available Tradelines</h2>
-      <div className="container mx-auto py-10 px-10">
-        <DataTable columns={columns} data={data} />
+      <div className="container mx-auto px-10 pt-4 pb-8">
+        <div className="shadcn-table">
+          <DataTable columns={columns} data={data} />
+        </div>
       </div>
       <a href="https://www.jotform.com/form/243313675055051" target="_blank">
         <div className="center">
