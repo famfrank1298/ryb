@@ -2,16 +2,20 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100vw;
-  align-items: center;
   height: calc(100vh + var(--navbar-height, 80px));
+  align-items: center;
+  background-color: var(--background);
   pointer-events: none;
 }
+
 .hero-text {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 2rem;
   justify-content: center;
-  align-items: center;
-  height: 100%;
+  align-items: flex-start;
+  padding: 2rem;
+  pointer-events: auto;
   animation: slideDown 1.5s ease-out;
 }
 
@@ -27,17 +31,20 @@
 }
 
 .header {
-  text-align: center;
-  font-size: 65px;
+  font-size: 4rem; /* Adjusted for better scaling */
+  line-height: 1.2;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--foreground);
   margin-bottom: 1rem;
-  line-height: 1;
 }
 
 .subheading {
-  text-align: center;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
   color: var(--gold);
-  font-size: 40px;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .image-container {
@@ -47,8 +54,8 @@
   position: relative;
   width: 100%;
   height: calc(100vh - var(--navbar-height));
-  margin-top: 5px;
   animation: slideUp 1.5s ease-out;
+  pointer-events: auto;
 }
 
 @keyframes slideUp {
@@ -56,9 +63,78 @@
     opacity: 0;
     transform: translateY(50px);
   }
-
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 2rem 0;
+    margin-top: var(--navbar-height, 80px);
+    margin-bottom: 0;
+  }
+
+  .hero-text {
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .header {
+    font-size: 3rem;
+  }
+
+  .subheading {
+    font-size: 1.5rem;
+  }
+
+  .image-container {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 2.5rem;
+  }
+
+  .subheading {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 545px) {
+  .image-container {
+    transform: scale(0.8);
+  }
+
+  .hero-text {
+    transform: scale(1.1);
+    gap: 1rem;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 1rem;
+  }
+
+  .hero-text {
+    gap: 1rem;
+  }
+
+  .header {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
   }
 }

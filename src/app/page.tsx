@@ -11,10 +11,10 @@ export default function Home() {
     <div className="home-container">
       <Nav />
       <Hero />
-      <About />
+      {/* <About />
       <Services />
       <CTA />
-      <ContactForm />
+      <ContactForm /> */}
       <Footer />
     </div>
   );

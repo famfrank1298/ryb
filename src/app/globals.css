@@ -85,19 +85,30 @@ P tags: Classic Sans Medium
   body {
     background-color: var(--background);
     color: var(--foreground);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 }
 
 html {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .home-container {
-  width: 100vw;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .section-title {

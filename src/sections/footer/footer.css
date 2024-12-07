@@ -1,6 +1,6 @@
 .footer-container {
   padding: 2rem;
-  width: 100%;
+  width: 100vw;
   background-color: var(--gray);
   font-size: 20px;
   text-align: center;
