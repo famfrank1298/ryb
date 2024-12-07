@@ -8,7 +8,7 @@ const CalendlyForm1 = () => {
   const username = process.env.NEXT_PUBLIC_CALENDLY_USERNAME as string;
 
   return (
-    <>
+    <div className="calendly-container">
       <div
         className="calendly-inline-widget"
         data-url={`https://calendly.com/${username}/30min?background_color=242323&text_color=ffffff&primary_color=ffcb71`}
@@ -23,7 +23,7 @@ const CalendlyForm1 = () => {
         src="https://assets.calendly.com/assets/external/widget.js"
         async
       />
-    </>
+    </div>
   );
 };
 
