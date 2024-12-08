@@ -88,10 +88,6 @@
 }
 
 @media (max-width: 540px) {
-  #contactBtn {
-    display: none;
-  }
-
   .nav-buttons Button {
     justify-content: right;
     background-color: var(--gold);
@@ -113,7 +109,6 @@
     padding: 0 1rem;
   }
 
-  #homeBtn,
   #aboutBtn {
     display: none;
   }
@@ -123,6 +118,10 @@
   .nav-container {
     grid-template-columns: 0.5fr 1.5fr 0.8fr;
     padding: 0 0.3rem;
+  }
+
+  #homeBtn {
+    display: none;
   }
 
   .nav-buttons {
@@ -137,6 +136,12 @@
 
   .consultation-button {
     justify-self: center;
+  }
+}
+
+@media (max-width: 930px) {
+  #contactBtn {
+    display: none;
   }
 }
 
