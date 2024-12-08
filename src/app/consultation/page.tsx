@@ -3,8 +3,6 @@
 import CalendlyForm1 from "@/components/calendly/calendlyForm1";
 import CalendlyForm2 from "@/components/calendly/calendlyForm2";
 import CalendlyForm3 from "@/components/calendly/calendlyForm3";
-import Footer from "@/sections/footer/footer";
-import Nav from "@/sections/nav/nav";
 import Pricing from "@/sections/pricing/pricing";
 import React, { useState } from "react";
 
@@ -16,8 +14,7 @@ export default function Consultations() {
   };
 
   return (
-    <div>
-      <Nav />
+    <div className="cons-container">
       <Pricing />
       <h2 className="calendly-title">Schedule Your Meeting</h2>
 
@@ -38,7 +35,6 @@ export default function Consultations() {
           <CalendlyForm3 />
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

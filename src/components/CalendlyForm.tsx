@@ -47,11 +47,3 @@ const CalendlyForm = ({ type }: { type: number }) => {
 };
 
 export default CalendlyForm;
-
-/*
-<!-- Calendly badge widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/rowboakye-rybpremier/30min?background_color=242323&text_color=ffffff&primary_color=ffcb71', text: 'Book Consultation', color: '#ffcb71', textColor: '#242323' }); }</script>
-<!-- Calendly badge widget end -->
-*/

@@ -60,6 +60,7 @@ export default function Nav() {
 
       <Button
         className="consultation-button"
+        id="bookBtn"
         onClick={() => {
           router.push("/consultation");
         }}

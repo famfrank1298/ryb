@@ -97,7 +97,7 @@
   color: green;
 }
 
-/* Responsiveness */
+/* Media Queries */
 @media (max-width: 768px) {
   .contact-container {
     display: block;

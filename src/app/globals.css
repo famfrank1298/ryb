@@ -104,6 +104,7 @@ body {
   height: 100%;
 }
 
+/* Global Classes */
 .center {
   display: flex;
   justify-content: center;
@@ -116,6 +117,17 @@ body {
 
 .failed-toast {
   background-color: red;
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease-out, transform 1s ease-out;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Main Page */
@@ -177,10 +189,11 @@ body {
 
 .price-selector {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 30px;
-  margin-bottom: 20px;
+  margin: 20px auto;
   align-items: center;
+  width: 100%;
 }
 
 .price-selector span {
@@ -189,33 +202,28 @@ body {
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 
 .price-selector span:hover {
-  color: rgba(255, 203, 113, 255);
+  color: var(--gold);
   text-decoration: underline;
+}
+
+.cons-container {
+  margin-bottom: 8rem;
 }
 
 .calendly-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: rgba(255, 203, 113, 255);
+  color: var(--gold);
   text-align: center;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: "Chocolate Classical Sans", sans-serif;
-}
-
-.animate {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 2s ease-out, transform 1s ease-out;
-}
-
-.animate.visible {
-  opacity: 1;
-  transform: translateY(0);
+  margin-top: var(--navbar-height, 70px);
 }
 
 /* Tradeline Page */
@@ -224,7 +232,6 @@ body {
   font-weight: 700;
   color: var(--gold);
   text-align: center;
-  /* margin-bottom: 2rem; */
   margin-top: var(--navbar-height, 70px);
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -287,12 +294,13 @@ body {
   color: #fff;
 }
 
+/* Calendly Form css */
 .calendly-container {
   position: relative;
   width: 100%;
-  padding-bottom: 80%;
-  height: 0;
-  overflow: hidden;
+  padding-bottom: 20%;
+  height: 720px;
+  /* overflow: hidden; */
   max-width: 100%;
   margin: 2rem auto;
   padding-left: 2rem;
@@ -304,21 +312,14 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 720px;
 }
 
 /* Media Query */
 @media (max-width: 768px) {
-  .calendly-container {
-    padding-bottom: 75%;
-  }
 }
 
 @media (max-width: 480px) {
-  .calendly-container {
-    padding-bottom: 100%;
-  }
-
   .price-selector {
     gap: 15px;
   }

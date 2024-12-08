@@ -125,11 +125,13 @@
   }
 }
 
-/* Responsive Styling */
+/* Media Queries */
 @media (max-width: 768px) {
   .footer-top {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    transform: scale(1.1);
   }
 
   .footer-left,
@@ -140,7 +142,7 @@
   }
 
   .quick-links {
-    flex-direction: column;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }

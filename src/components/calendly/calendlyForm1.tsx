@@ -1,8 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import Script from "next/script";
-import { useEffect } from "react";
 
 const CalendlyForm1 = () => {
   const username = process.env.NEXT_PUBLIC_CALENDLY_USERNAME as string;

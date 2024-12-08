@@ -1,6 +1,5 @@
 import React from "react";
-import Nav from "@/sections/nav/nav";
-import Footer from "@/sections/footer/footer";
+
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/sections/contact/contact";
 import { DataTable } from "./data-table";
@@ -72,7 +71,6 @@ export default async function Tradeline() {
 
   return (
     <>
-      <Nav />
       <h2 className="tradeline-title">Available Tradelines</h2>
       <div className="container mx-auto px-10 pt-4 pb-8">
         <div className="shadcn-table">
@@ -85,7 +83,6 @@ export default async function Tradeline() {
         </div>
       </a>
       <ContactForm />
-      <Footer />
     </>
   );
 }
